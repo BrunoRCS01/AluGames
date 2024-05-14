@@ -27,18 +27,6 @@ function cadatrarAluguel(){
     let numeroCliente = document.getElementById('numeroCliente').value;
     let cepCliente = document.getElementById('cepCliente').value;
 
-    //let gameAlugado = document.getElementById(`game-${id}`);
-    //console.log(gameAlugado);
-
-    //let divForm = document.getElementById('nomeCliente');
-    //let classForm = divForm.querySelector('.container__input');
-
-    /*let nomeClientes = [];
-    let telefoneClientes = [];
-    let emailClientes = [];
-    let enderecoClientes = [];
-    let numeroClientes = [];
-    let cepClientes = [];*/
 
        if(nomeCliente == ''){
             
@@ -85,12 +73,6 @@ function cadatrarAluguel(){
             numeroClientes.push(numeroCliente);
             cepClientes.push(cepCliente);
 
-            console.log(nomeClientes);
-            console.log(telefoneClientes);
-            console.log(emailClientes);
-            console.log(enderecoClientes);
-            console.log(numeroClientes);
-            console.log(cepClientes);  
 
             statusCadastrarAluguelJogo();
 
@@ -176,7 +158,7 @@ function alterarStatus(id){
     
     
     let gameClicado = document.getElementById(`game-${id}`);
-    console.log(gameClicado);
+
 
     let divImagem = gameClicado.querySelector('.dashboard__item__img');
     let btnAluga = gameClicado.querySelector('.dashboard__item__button');
@@ -186,24 +168,18 @@ if (gameClicado == document.getElementById(`game-1`)){
     
     let jogo1 = 'Monopoly';
     jogos.push(jogo1);
-    console.log(jogos);
+ 
 
 }else if (gameClicado == document.getElementById(`game-2`)){
     let jogo1 = 'Ticket to Ride';
     jogos.push(jogo1);
-    console.log(jogos);
+
 }else{
     let jogo1 = 'Takenoko';
     jogos.push(jogo1);
-    console.log(jogos);
+    
 };
 
-
-
-    //let classeJogo = gameClicado.querySelector('dashboard__item__name');
-    //let jogoalugado = classeJogo.innerText;
-
-    //console.log(classeJogo);
 
     if (btnAluga.style.display === 'block' || btnAluga.style.display === '') {
         btnAluga.style.display = 'none';
@@ -211,33 +187,6 @@ if (gameClicado == document.getElementById(`game-1`)){
         divImagem.classList.add('dashboard__item__img--rented');
     } 
 
-    
-
-        /*if(divImagem.classList.contains('dashboard__item__img--rented') && btnAluga.classList.contains('dashboard__item__button--return')){
-                
-            divImagem.classList.remove('dashboard__item__img--rented');
-            btnAluga.classList.remove('dashboard__item__button--return');
-
-            btnAluga.textContent = 'Alugar';
-
-            //divImagem.classList.add('dashboard__item__img--rented');
-            //btnAluga.classList.add('dashboard__item__button--return');
-
-        }   else{
-
-            //divImagem.classList.remove('dashboard__item__img dashboard__item__img--rented');
-            //btnAluga.classList.remove('dashboard__item__button dashboard__item__button--return');
-
-            //divImagem.classList.add('dashboard__item__img');
-            //btnAluga.classList.remove('dashboard__item__button');
-
-            divImagem.classList.add('dashboard__item__img--rented');
-            btnAluga.classList.add('dashboard__item__button--return');
-
-            btnAluga.textContent = 'Devolver';
-
-
-        }*/
 }
 
 function formAlugado(id) {
@@ -279,20 +228,7 @@ function formAlugado(id) {
     }
 
     let gameAlugado = document.getElementById(`game-${id}`);
-    console.log(gameAlugado);
 
-    //let JogoIncluido = jogos.indexOf("Monopoly");
-    
-
-    //let clienteNome = nomeClientes[0];
-    //console.log(clienteNome);
-
-    //let formDadosCliente = document.getElementById('formAlugado'); 
-    //formDadosCliente.innerHTML =  `<label class="textoAlugado">Nome Completo: ${clienteNome}</label>`;
-
-    //console.log(nomeClientes[0]);
-
-    //if (gameAlugado == document.getElementById(`game-1`) || JogoIncluido === 'Monopoly'){
     if (gameAlugado == document.getElementById(`game-1`)){
 
         let gameUm = jogos.indexOf("Monopoly");
@@ -304,14 +240,6 @@ function formAlugado(id) {
         let clienteEndereco = enderecoClientes[gameUm];
         let clienteNum = numeroClientes[gameUm];
         let clienteCep = cepClientes[gameUm];
-
-
-        console.log(clienteNome);
-        console.log(clienteTelefone);
-        console.log(clienteEmail);
-        console.log(clienteEndereco);
-        console.log(clienteNum);
-        console.log(clienteCep);
 
         let formDadosCliente = document.getElementById('formAlugado'); 
         formDadosCliente.innerHTML =  `<label class="textoAlugado">Nome Completo: ${clienteNome}</label><br>
@@ -338,14 +266,6 @@ function formAlugado(id) {
         let clienteNum = numeroClientes[gameUm];
         let clienteCep = cepClientes[gameUm];
 
-
-        console.log(clienteNome);
-        console.log(clienteTelefone);
-        console.log(clienteEmail);
-        console.log(clienteEndereco);
-        console.log(clienteNum);
-        console.log(clienteCep);
-
         let formDadosCliente = document.getElementById('formAlugado'); 
         formDadosCliente.innerHTML =  `<label class="textoAlugado">Nome Completo: ${clienteNome}</label><br>
 
@@ -370,14 +290,6 @@ function formAlugado(id) {
         let clienteEndereco = enderecoClientes[gameUm];
         let clienteNum = numeroClientes[gameUm];
         let clienteCep = cepClientes[gameUm];
-
-
-        console.log(clienteNome);
-        console.log(clienteTelefone);
-        console.log(clienteEmail);
-        console.log(clienteEndereco);
-        console.log(clienteNum);
-        console.log(clienteCep);
 
         let formDadosCliente = document.getElementById('formAlugado'); 
         formDadosCliente.innerHTML =  `<label class="textoAlugado">Nome Completo: ${clienteNome}</label><br>
@@ -423,13 +335,6 @@ function devolverJogo(){
         } else {
             menuAlugado.style.display = 'none';
         }
-
-            console.log(nomeClientes);
-            console.log(telefoneClientes);
-            console.log(emailClientes);
-            console.log(enderecoClientes);
-            console.log(numeroClientes);
-            console.log(cepClientes); 
 
             let gameClicado = document.getElementById('game-1');
 
@@ -490,13 +395,6 @@ function devolverJogo(){
             menuAlugado.style.display = 'none';
         }
 
-            console.log(nomeClientes);
-            console.log(telefoneClientes);
-            console.log(emailClientes);
-            console.log(enderecoClientes);
-            console.log(numeroClientes);
-            console.log(cepClientes); 
-
             let gameClicado = document.getElementById('game-2');
 
             let btnAluga = gameClicado.querySelector('.dashboard__item__button');
@@ -555,13 +453,6 @@ function devolverJogo(){
         } else {
             menuAlugado.style.display = 'none';
         }
-
-            console.log(nomeClientes);
-            console.log(telefoneClientes);
-            console.log(emailClientes);
-            console.log(enderecoClientes);
-            console.log(numeroClientes);
-            console.log(cepClientes); 
 
             let gameClicado = document.getElementById('game-3');
 
