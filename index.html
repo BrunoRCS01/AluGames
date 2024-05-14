@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluGames</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="body">
+    <main class="container main">
+        <img src="img/logo.svg" alt="Logo AluGames">
+        <section class="divisor">
+            <div class="divisor__line"></div>
+            <img src="img/fade_bar.svg" alt="Visual bar" class="divisor__bar">
+            <div class="divisor__line"></div>
+        </section>
+        <h1 class="page-title">Aluguel de <span class="page-title__emphasis">boardgames</span></h1>
+        <section class="dashboard">
+            <ul class="dashboard__items">
+                <li class="dashboard__items__item" id="game-1">
+                    <div class="dashboard__item__img">
+                        <img src="img/monopoly.png" alt="Capa jogo Monopoly">
+                    </div>
+                    <p class="dashboard__item__name">Monopoly</p>
+                    <a onclick="statusCadastrarAluguelJogo(); alterarStatus(1)" href="#" id="inputItemBtn_alugar" class="dashboard__item__button">Alugar</a>
+                    <a onclick="formAlugado(1)" href="#" id="inputItemBtn" class="dashboard__item__button--return">Devolver</a>
+                </li>
+                <li class="dashboard__items__item" id="game-2">
+                    <div class="dashboard__item__img">
+                        <img src="img/ticket_to_ride.png" alt="Capa jogo Ticket to Ride">
+                    </div>
+                    <p class="dashboard__item__name">Ticket to Ride</p>
+                    <a onclick="statusCadastrarAluguelJogo(); alterarStatus(2)" href="#" id="inputItemBtn_alugar_two" class="dashboard__item__button">Alugar</a>
+                    <a onclick="formAlugado(2)" href="#" id="inputItemBtn_two" class="dashboard__item__button--return">Devolver</a>
+                </li>
+                <li class="dashboard__items__item" id="game-3">
+                    <div class="dashboard__item__img">
+                        <img src="img/takenoko.png" alt="Capa jogo Takenoko">
+                    </div>
+                    <p class="dashboard__item__name">Takenoko</p>
+                    <a onclick="statusCadastrarAluguelJogo(); alterarStatus(3)" href="#" id="inputItemBtn_alugar_tree" class="dashboard__item__button">Alugar</a>
+                    <a onclick="formAlugado(3)" href="#" id="inputItemBtn_tree" class="dashboard__item__button--return">Devolver</a>
+                </li>
+            </ul>
+        </section>
+        <img src="img/hachuras.svg" alt="Visual hachuras" class="hachuras">
+    </main>
+    
+    <div class="menuAlguel" id="menuAlguel">
+        <p>Aluguel</p><br>
+
+        <section id="formCadastro">
+        <label class="texto__paragrafo">Nome Completo:</label><br>
+        <input class="container__input" type="text" size="35" placeholder="Digite seu nome..." id="nomeCliente" required><br><br>
+
+        <label class="texto__paragrafo">Telefone Contato:</label><br>
+        <input class="container__input" type="text" size="35"placeholder="(DD) 12345-6789" maxlength="11" onkeyup="formatarTelefone(this)" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" id="telefoneCliente" required><br><br>
+
+        <label class="texto__paragrafo">E-mail:</label><br>
+        <input class="container__input" type="text" size="35" placeholder="Exemplo@gmail.com" id="emailCliente" required><br><br>
+
+        <label class="texto__paragrafo">Endereço:</label><br>
+        <input class="container__input" type="text" size="20" placeholder="Rua Teste de exemplo" id="enderecoCliente"> 
+        <label class="texto__paragrafo_num">Num:</label><input class="container__input_num" type="number" style="width: 60px;" placeholder="111" id="numeroCliente" required><br><br>
+
+        <label class="texto__paragrafo">CEP</label><br>
+        <input class="container__input" type="text" size="35" placeholder="Ex: 09370-480" id="cepCliente" required><br><br>
+
+        <button onclick="cadatrarAluguel()" href="" class="btnFormAlugar">Alugar</button><br>
+    </section>
+        
+    </div>
+
+    <div class="menuAlugado" id="menuAlugado">
+        <p class="jogoAlugado">Aluguel</p><br>
+
+        <section id="formAlugado">
+        <label class="textoAlugado">Nome Completo:</label><br>
+
+        <label class="textoAlugado">Telefone Contato:</label><br>
+
+        <label class="textoAlugado">E-mail:</label><br>
+
+        <label class="textoAlugado">Endereço:</label>
+
+        <label class="textoAlugado">CEP:</label><br><br>
+
+        <button onclick="devolverJogo()" href="" class="btnFormDevolver">Devolver</button><br>
+    </section>
+        
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
