@@ -1,7 +1,7 @@
 <h1>AluGames</h1>
 <hr>
 
-<p> Esse projeto é baseado em uma atividade do curso de logica de programação da Alura. Inicialmente o projeto é apenar pra quando clicar em  "Alugar" deixar a imagem escura e mudaria o botao para "Devolver".</p>
+<p>Esse projeto é baseado em uma atividade do curso de logica de programação da Alura. Inicialmente o projeto é apenar pra quando clicar em  "Alugar" deixar a imagem escura e mudaria o botao para "Devolver".</p>
 
 <p>Após concluir o projeto proposto durante a aula, decidi aprimorá-lo. Quando clicamos em alugar, teoricamente não havia nenhum registro da pessoa que alugou. Por isso, desenvolvi uma solução que utiliza arrays e funções para cadastrar a pessoa que deseja alugar o jogo.</p>
 
@@ -13,4 +13,5 @@
 </ul>
 
 
-![2024-05-14 16-51-59](https://github.com/BrunoRCS01/AluGames/assets/135667163/a0841218-b0de-4bbd-bfd9-2fffd416c819)
+
+![2024-05-14-16-51-59](https://github.com/BrunoRCS01/AluGames/assets/135667163/c018e589-730f-44ab-8d58-4a9d13d416fc)
